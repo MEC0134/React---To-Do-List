@@ -10,8 +10,7 @@ To use the React To-Do List app, follow these steps:
 1. Git clone https://github.com/MEC0134/to-do-list.git
 2. cd to repository
 3. Open folder in your choice of editor 
-4. npm install 
-5. npm start
+4. npm start
 
 
 
