@@ -1,0 +1,187 @@
+body {
+  background-color: #54a0ff;
+  min-height: 70vh;
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsl(198, 1%, 29%);
+  font-family: "Architects Daughter", cursive;
+  text-align: center;
+  font-size: 130%;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  min-height: 500px;
+  max-width: 500px;
+  min-width: 250px;
+  background: #f1f5f8;
+  background-image: radial-gradient(#bfc0c1 7.2%, transparent 0);
+  background-size: 25px 25px;
+  border-radius: 20px;
+  box-shadow: 4px 3px 7px 2px #00000040;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.heading h1 {
+  transform: rotate(2deg);
+  padding: 0.2rem 1.2rem;
+  border-radius: 20% 5% 20% 5%/5% 20% 25% 20%;
+  background-color: #54a0ff;
+  font-size: 1.5rem;
+}
+
+.form input {
+  box-sizing: border-box;
+  background-color: transparent;
+  padding: 0.7rem;
+  border-bottom-right-radius: 15px 3px;
+  border-bottom-left-radius: 3px 15px;
+  border: solid 3px transparent;
+  border-bottom: dashed 3px #54a0ff;
+  font-family: "Architects Daughter", cursive;
+  font-size: 1rem;
+  color: hsla(260, 2%, 25%, 0.7);
+  width: 70%;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font-family: "Architects Daughter", cursive;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  background-color: #ffeaa7;
+}
+button span {
+  background: #f1f5f8;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 2px solid hsl(198, 1%, 29%);
+}
+
+li {
+  text-align: left;
+  position: relative;
+  padding: 0.5rem;
+}
+
+
+/* Guide Card */
+
+.guide-card {
+  position: fixed;
+  top: 40%;
+  left: 3rem; 
+  transform: translateY(-50%);
+  width: 350px; 
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 4px 3px 7px 2px #00000040;
+  z-index: 9999;
+}
+
+.guide-card h2 {
+  margin-top: 0;
+}
+
+.guide-card ul {
+  counter-reset: my-counter; 
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: left;
+}
+
+.guide-card li {
+  margin-bottom: 0.5rem;
+  counter-increment: my-counter;
+}
+
+.guide-card li::before {
+  content: counter(my-counter);
+  display: inline-block;
+  width: 1.5em; 
+  margin-right: 0.5em; 
+  font-weight: bold;
+}
+
+.guide-card button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #54a0ff;
+}
+
+/* Color Picker */
+
+.picker-container {
+  position: fixed;
+  top: 10%;
+  right: 10%;
+}
+
+.color-picker {
+  display: flex;
+  align-items:flex-end;
+  margin-top: 20px;
+}
+
+.color-picker input[type="color"] {
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+
+.color-picker input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.color-picker input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+
+.color-picker input[type="color"]::-moz-color-swatch {
+  border: none;
+  border-radius: 50%;
+}
+
+
+/* Media Queries */
+
+@media(max-width: 700px) {
+
+  .guide-card {
+    position: fixed;
+    top: 50%;
+    left: 22rem; 
+    transform: translateY(-50%);
+    width: 350px; 
+    height: 70vh;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 4px 3px 7px 2px #00000040;
+    z-index: 9999;
+  }
+}
